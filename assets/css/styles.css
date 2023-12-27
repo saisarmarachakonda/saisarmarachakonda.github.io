@@ -1576,10 +1576,8 @@ img{
     display: none;
 }
 
-
 #chat-container {
     position: fixed;
-    bottom: 10px;
     left: 10px;
     max-width: 350px;
     width: calc(100% - 20px); /* Responsive width with padding */
@@ -1588,6 +1586,14 @@ img{
     border-radius: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
+    bottom: 10px; /* Default bottom spacing for larger screens */
+}
+
+/* Media query for smaller screens (mobile devices) */
+@media (max-width: 600px) {
+    #chat-container {
+        bottom: 50px; /* Increased bottom spacing for mobile devices */
+    }
 }
 
 #chat-header {
