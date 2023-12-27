@@ -336,3 +336,46 @@ function askQuestion(questionKey) {
     const chatBox = document.getElementById('chat-content');
     chatBox.scrollTop = 0; // Sets the scroll position to the top
 }
+
+
+
+
+var userMove;
+        var computerMove;
+        var result;
+
+        // Function to open the popup and start the game
+        function startGame() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'flex';
+            document.getElementById('result').innerHTML = '';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+
+        // Function to play the game
+        function play(move) {
+            userMove = move;
+            var moves = ['rock', 'paper', 'scissors'];
+            computerMove = moves[Math.floor(Math.random() * moves.length)];
+            
+            // Determine the result
+            if (userMove === computerMove) {
+                result = "It's a tie!";
+            } else if (
+                (userMove === 'rock' && computerMove === 'scissors') ||
+                (userMove === 'paper' && computerMove === 'rock') ||
+                (userMove === 'scissors' && computerMove === 'paper')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'Computer wins!';
+            }
+
+            // Display the result
+            document.getElementById('result').innerHTML = 'You chose ' + userMove + ', sai chose ' + computerMove + '. ' + result;
+        }
