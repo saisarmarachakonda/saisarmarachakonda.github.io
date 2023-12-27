@@ -1576,13 +1576,14 @@ img{
     display: none;
 }
 
+
 #chat-container {
     position: fixed;
     bottom: 10px;
     left: 10px;
     max-width: 350px;
-    width: 95%;
-    background-color: rgba(255, 255, 255, 0.9); /* Light and transparent */
+    width: calc(100% - 20px); /* Responsive width with padding */
+    background-color: #fff; /* Solid background color */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     overflow: hidden;
@@ -1607,7 +1608,7 @@ img{
     transition: max-height 0.3s ease-out;
 }
 
-.question-button {
+.question-button, #submit-question {
     display: block;
     width: 100%;
     padding: 10px;
@@ -1621,7 +1622,7 @@ img{
     transition: background-color 0.2s;
 }
 
-.question-button:hover {
+.question-button:hover, #submit-question:hover {
     background-color: #005f73;
 }
 
@@ -1632,81 +1633,37 @@ img{
     background-color: #f5f5f5;
     padding: 10px;
     border-radius: 5px;
-    font-size: 14px; /* Reduced font size */
+    font-size: 14px;
 }
 
 #user-input {
-    width: calc(100% - 90px);
+    width: calc(100% - 110px); /* Adjust width to fit the button */
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #007bff;
     margin-right: 10px;
     border-radius: 4px;
     box-sizing: border-box;
-}
-
-#submit-question {
-    width: 80px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
-
-#submit-question:hover {
-    background-color: #218838;
-}
-
-@media (min-width: 600px) {
-    #chat-container {
-        width: 350px;
-        left: 20px;
-        bottom: 20px;
-    }
-}
-
-
-#user-input {
-    width: calc(100% - 110px); /* Adjust width to accommodate the button */
-    padding: 10px;
-    border: 2px solid #007bff; /* Stylish border color */
-    margin-right: 10px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px; /* Larger font size for better readability */
+    font-size: 16px;
     transition: border-color 0.3s ease-in-out;
 }
 
 #user-input:focus {
-    border-color: #005f73; /* Darker border on focus for better user feedback */
-    outline: none; /* Remove default focus outline */
+    border-color: #005f73;
+    outline: none;
 }
 
-#submit-question {
-    width: 100px; /* Fixed width for consistency */
-    background-color: #28a745; /* Green color for the submit button */
-    color: white;
-    border: none;
-    padding: 10px 15px; /* Slightly larger padding for a better touch area */
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: bold; /* Make the text a bit bolder */
-    transition: background-color 0.2s ease-in-out;
-}
-
-#submit-question:hover {
-    background-color: #218838; /* Slightly darker green on hover */
-}
-
-/* Optional: Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
+    #chat-container {
+        bottom: 5px;
+        left: 5px;
+        width: calc(100% - 10px); /* Adjust for smaller screens */
+    }
     #user-input, #submit-question {
-        width: auto; /* Full width on smaller screens */
+        width: auto;
         flex: 1;
+        margin-right: 5px;
     }
     #submit-question {
-        margin-left: 10px; /* Ensure some space between input and button */
+        width: 90px; /* Slightly smaller button for smaller screens */
     }
 }

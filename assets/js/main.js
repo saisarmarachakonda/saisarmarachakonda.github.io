@@ -331,5 +331,8 @@ function getResponse(input) {
 
 function askQuestion(questionKey) {
     appendMessage('You', getQuestionText(questionKey));
-    appendMessage('SAI', getAnswer(questionKey));
+    appendMessage('Sai', getAnswer(questionKey));
+
+    const chatBox = document.getElementById('chat-content');
+    chatBox.scrollTop = 0; // Sets the scroll position to the top
 }
