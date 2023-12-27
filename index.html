@@ -834,6 +834,19 @@
 
                     <div class="qualification__content qualification__active" data-content id="education">
 
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">PG in Artificial Intelligence Analysis, Design and
+                                    Implementation</h3>
+                                <span class="qualification__subtitle">Durham College</span>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <!-- Add line if this is an odd entry in the list, remove if even -->
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
                         <!--==================== QUALIFICATION 1 ====================-->
                         <div class="qualification__data">
                             <div>
@@ -903,7 +916,8 @@
                                         <ul class="qualification__modal-works grid">
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Crafted LLM reports for a roster of close to 10 clients, enhancing
+                                                <p>Crafted LLM reports for a roster of close to 10 clients,
+                                                    enhancing
                                                     business outreach and solutions.</p>
                                             </li>
                                             <li class="qualification__modal-work">
@@ -913,7 +927,8 @@
                                             </li>
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Engineered integrated banking, retail, and e-commerce solutions that
+                                                <p>Engineered integrated banking, retail, and e-commerce solutions
+                                                    that
                                                     significantly increased business profitability.</p>
                                             </li>
                                         </ul>
@@ -993,12 +1008,14 @@
                                         <ul class="qualification__modal-works grid">
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Lead the machine learning team building the models and migrating them
+                                                <p>Lead the machine learning team building the models and migrating
+                                                    them
                                                     to production</p>
                                             </li>
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Developed solution to mitigate fraud in SIU and CRO decisions.</p>
+                                                <p>Developed solution to mitigate fraud in SIU and CRO decisions.
+                                                </p>
                                             </li>
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
@@ -1007,13 +1024,15 @@
                                             </li>
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Rebuilt real-time demand and response models for a leading company in
+                                                <p>Rebuilt real-time demand and response models for a leading
+                                                    company in
                                                     Retail.</p>
                                                 </p>
                                             </li>
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
-                                                <p>Rebuilt real-time demand and response models for a leading company in
+                                                <p>Rebuilt real-time demand and response models for a leading
+                                                    company in
                                                     Retail.</p>
                                                 </p>
                                             </li>
@@ -1066,7 +1085,8 @@
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
                                                 <p>Created an AR application for a retail client, enhancing customer
-                                                    experience with detailed guidance for a seamless in-store journey.
+                                                    experience with detailed guidance for a seamless in-store
+                                                    journey.
                                                 </p>
                                             </li>
                                         </ul>
@@ -1102,7 +1122,8 @@
                                             <li class="qualification__modal-work">
                                                 <i class="uil uil-check-circle qualification__modal-icon"></i>
                                                 <p>Assisted the team in developing an automated solution for display
-                                                    advertisements, involving analysis and tagging of ads to streamline
+                                                    advertisements, involving analysis and tagging of ads to
+                                                    streamline
                                                     the segmentation process and eliminate irrelevant imagery.</p>
                                             </li>
                                         </ul>
@@ -2095,6 +2116,52 @@
             </div>
 
         </section>
+
+        <!-- Chatbot -->
+        <div id="chat-container">
+            <div id="chat-header" onclick="toggleChat()">
+                <span>Ask me anything about Sai</span>
+            </div>
+            <div id="chat-content" class="hidden">
+                <div id="chat-box">
+                    <!-- Messages will be displayed here -->
+                </div>
+                <button class="question-button" onclick="askQuestion('inspiration')">What inspired you to specialize in
+                    Data Science and Artificial Intelligence?</button>
+                <button class="question-button" onclick="askQuestion('evolution')">With your extensive experience, how
+                    have you seen data science evolve in the industries you've worked in?</button>
+                <button class="question-button" onclick="askQuestion('tools')">Can you detail how you've utilized Python
+                    and R in your data science projects?</button>
+                <button class="question-button" onclick="askQuestion('methods')">What kind of quantitative methods do
+                    you employ most frequently in your models?</button>
+                <button class="question-button" onclick="askQuestion('aiHubProject')">What project at AI Hub are you
+                    most proud of, and why?</button>
+                <button class="question-button" onclick="askQuestion('modelApplication')">How have you applied your
+                    modeling skills to improve processes in the industries you've worked in?</button>
+                <button class="question-button" onclick="askQuestion('deploymentChallenges')">What are some challenges
+                    you've faced in deploying models, and how did you overcome them?</button>
+                <button class="question-button" onclick="askQuestion('dataVisualization')">How do you ensure the
+                    reliability of your data visualizations?</button>
+                <button class="question-button" onclick="askQuestion('efficiencyImprovement')">Can you explain a time
+                    when your work significantly increased efficiency or profitability for a business?</button>
+                <button class="question-button" onclick="askQuestion('trends')">How do you stay up-to-date with the
+                    latest trends and technologies in AI?</button>
+                <button class="question-button" onclick="askQuestion('mentoring')">What's your strategy for mentoring
+                    emerging talents in the field of data science?</button>
+                <button class="question-button" onclick="askQuestion('mlDemandForecasting')">Can you give an example of
+                    a successful project where you used machine learning for demand forecasting?</button>
+                <button class="question-button" onclick="askQuestion('innovativeContribution')">What has been your most
+                    innovative contribution to the field of AI?</button>
+                <button class="question-button" onclick="askQuestion('timeSeriesEnergy')">How have you used time series
+                    forecasting in the energy sector?</button>
+                <button class="question-button" onclick="askQuestion('eCommerceAI')">What has been your role in
+                    developing AI solutions for e-commerce?</button>
+                <button class="question-button" onclick="askQuestion('cloudDeployment')">How do you approach the
+                    deployment of models using cloud services like AWS and Azure?</button>
+            
+            </div>
+        </div>
+
     </main>
 
     <!--==================== FOOTER ====================-->
