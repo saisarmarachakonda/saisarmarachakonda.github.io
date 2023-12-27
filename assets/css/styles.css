@@ -1749,10 +1749,10 @@ img{
 /* Floating Circular Button */
 .play-game-button {
     position: fixed;
-    bottom: 100px; /* Adjust the distance from the bottom */
+    bottom: 110px; /* Adjust the distance from the bottom */
     right: 20px; /* Adjust the distance from the right */
     z-index: 2;
-    size: 5rem;
+    size: 7.5rem;
     padding: 8px;
     border-radius: 50%; /* Make it circular */
     display: flex;
