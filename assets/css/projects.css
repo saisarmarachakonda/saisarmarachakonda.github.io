@@ -1,0 +1,220 @@
+/* General Accordion Styling */
+.card {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    /* Light grey border for the entire card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+  }
+
+  /* Accordion Header Styling */
+  .red-accordion {
+    padding: 10px;
+    border: none;
+    /* Removes the default border */
+    background-color: #f8f9fa;
+    /* Light background for the header */
+    color: #333;
+    /* Darker text color for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid red;
+    /* Red border at the bottom of the header */
+  }
+
+  .red-accordion h5 {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 18px;
+    /* Slightly larger font size for the title */
+  }
+
+  .industry-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #888;
+    /* Lighter color for the industry type */
+  }
+
+  /* Accordion Body Styling */
+  .card-body {
+    background-color: white;
+    padding: 15px;
+  }
+
+  /* Styling for collapsed accordion headers */
+  .red-accordion.collapsed {
+    background-color: #fff;
+    /* White background when collapsed */
+    color: #333;
+    /* Default text color */
+  }
+
+  /* Cursor pointer for headers */
+  .red-accordion:hover {
+    cursor: pointer;
+  }
+
+  /* Enhanced Technology List Styling */
+  .technologies {
+    padding-top: 10px;
+    font-style: italic;
+    color: #555;
+  }
+
+  .btn-know-more {
+
+    background-color: #000000;
+    /* Primary blue color */
+    color: white;
+    /* White text for contrast */
+    border: 2px solid transparent;
+    /* Transparent border to maintain the button size on hover */
+    /* padding: 10px 20px; */
+    /* Comfortable padding */
+    border-radius: 5px;
+    /* Rounded pill shape */
+    font-weight: bold;
+    /* Bold text */
+    text-transform: capitalize;
+    /* Capitalize text for a softer look */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    cursor: pointer;
+    /* Cursor changes to pointer on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+  }
+  .btn{
+    padding: 0.275rem 0.65rem;
+  }
+  .btn-know-more:hover,
+  .btn-know-more:focus {
+    background-color: #0056b3;
+    /* Slightly darker blue on hover/focus */
+    border-color: #0056b3;
+    /* Border color changes to match the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow for depth */
+    color: #ffffff;
+    /* Ensuring text color remains white */
+  }
+
+  .btn-know-more:active {
+    background-color: #00448f;
+    /* Even darker for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Reduced shadow for pressed effect */
+  }
+
+
+  /* Accordion Header Styling */
+  .blue-accordion {
+    padding: 10px;
+    border: none;
+    /* Removes the default border */
+    background-color: #f8f9fa;
+    /* Light background for the header */
+    color: #333;
+    /* Darker text color for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #007bff;
+    /* Blue border at the bottom of the header */
+  }
+
+  .blue-accordion h5 {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 18px;
+    /* Slightly larger font size for the title */
+  }
+
+  .green-accordion {
+    padding: 10px;
+    border: none;
+    /* Removes the default border */
+    background-color: #f8f9fa;
+    /* Light background for the header */
+    color: #333;
+    /* Darker text color for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #00ff59;
+    /* Blue border at the bottom of the header */
+  }
+
+  h5 {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 18px;
+    /* Slightly larger font size for the title */
+  }
+
+  
+  .purple-accordion {
+    padding: 10px;
+    border: none;
+    /* Removes the default border */
+    background-color: #f8f9fa;
+    /* Light background for the header */
+    color: #333;
+    /* Darker text color for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #9406c7;
+    /* Blue border at the bottom of the header */
+  }
+
+  .green-accordion h5 {
+    margin: 0;
+    /* Removes default margin */
+    font-size: 18px;
+    /* Slightly larger font size for the title */
+  }
+
+
+  .orange-accordion {
+    padding: 10px;
+    border: none;
+    /* Removes the default border */
+    background-color: #f8f9fa;
+    /* Light background for the header */
+    color: #333;
+    /* Darker text color for contrast */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff6a00;
+    /* Blue border at the bottom of the header */
+  }
+
+  .company-logo {
+    width: 100px;
+    /* Adjust size as needed */
+    height: auto;
+  }
+
+  .highlight-list {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+
+
+  /* Custom bullet points for ul */
+.project ul{
+    list-style-type: square; /* You can use 'circle', 'square', 'disc', or none */
+    padding-left: 20px; /* Adjust as needed */
+}
+
+/* Style for each li */
+.project ul{
+    margin-bottom: 5px; /* Spacing between list items */
+    font-size: 16px; /* Adjust font size as needed */
+    line-height: 1.6; /* Adjust line height for better readability */
+}

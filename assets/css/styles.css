@@ -289,7 +289,7 @@ img{
 }
 
 .home__social-icon{
-    font-size: 1.25rem;
+    font-size: 1.45rem;
     color: var(--first-color);
 }
 
@@ -1789,4 +1789,79 @@ img{
 /* Show text on hover */
 .play-game-button:hover::before {
     opacity: 1;
+}
+
+
+
+
+.btn-know-more {
+
+    background-color: #000000;
+    /* Primary blue color */
+    color: white;
+    /* White text for contrast */
+    border: 2px solid transparent;
+    /* Transparent border to maintain the button size on hover */
+    /* padding: 10px 20px; */
+    /* Comfortable padding */
+    border-radius: 5px;
+    /* Rounded pill shape */
+    font-weight: bold;
+    /* Bold text */
+    text-transform: capitalize;
+    /* Capitalize text for a softer look */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effects */
+    cursor: pointer;
+    /* Cursor changes to pointer on hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+  }
+  .btn{
+    padding: 0.275rem 0.65rem;
+  }
+  .btn-know-more:hover,
+  .btn-know-more:focus {
+    background-color: #0056b3;
+    /* Slightly darker blue on hover/focus */
+    border-color: #0056b3;
+    /* Border color changes to match the background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Enhanced shadow for depth */
+    color: #ffffff;
+    /* Ensuring text color remains white */
+  }
+
+  .btn-know-more:active {
+    background-color: #00448f;
+    /* Even darker for active state */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Reduced shadow for pressed effect */
+  }
+
+
+
+  .typing-container {
+    font-size: 17px;
+    color: #6a7785;
+
+    font-weight: bold;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.highlight {
+    color: #3191c1; /* Red color for highlight */
+}
+
+.highlight.ai {
+    visibility: hidden; /* Initially hide the AI text */
+}
+
+@keyframes blinkAnimation {
+    50% { border-color: transparent; }
+}
+.typing-container {
+    animation: blinkAnimation 1s step-end infinite;
 }

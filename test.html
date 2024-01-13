@@ -1,326 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
+<style>
+   .typing-container {
+    font-size: 24px;
+    font-weight: bold;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+.highlight {
+    color: #ff0000; /* Red color for highlight */
+}
 
-    <title>Personal Projects</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-  <style>
-    /* General Accordion Styling */
-    .card {
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      /* Light grey border for the entire card */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Subtle shadow for depth */
+.highlight.ai {
+    visibility: hidden; /* Initially hide the AI text */
+}
+
+@keyframes blinkAnimation {
+    50% { border-color: transparent; }
+}
+.typing-container {
+    animation: blinkAnimation 1s step-end infinite;
+}
+
+
+</style>
+
+<div class="typing-container">
+    <span class="highlight">S</span><span id="typing"></span>
+    <span class="highlight ai">AI</span>
+</div>
+
+
+<script>
+   const text = "oftware Engineer powered by ";
+let index = 0;
+
+function typeText() {
+    if (index < text.length) {
+        document.getElementById('typing').innerText += text[index];
+        index++;
+        setTimeout(typeText, 150); // Adjust typing speed
+    } else {
+        document.querySelector('.highlight.ai').style.visibility = 'visible'; // Show AI after typing
     }
+}
 
-    /* Accordion Header Styling */
-    .red-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid red;
-      /* Red border at the bottom of the header */
-    }
-
-    .red-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .industry-type {
-      font-size: 14px;
-      font-weight: bold;
-      color: #888;
-      /* Lighter color for the industry type */
-    }
-
-    /* Accordion Body Styling */
-    .card-body {
-      background-color: white;
-      padding: 15px;
-    }
-
-    /* Styling for collapsed accordion headers */
-    .red-accordion.collapsed {
-      background-color: #fff;
-      /* White background when collapsed */
-      color: #333;
-      /* Default text color */
-    }
-
-    /* Cursor pointer for headers */
-    .red-accordion:hover {
-      cursor: pointer;
-    }
-
-    /* Enhanced Technology List Styling */
-    .technologies {
-      padding-top: 10px;
-      font-style: italic;
-      color: #555;
-    }
-
-    .btn-know-more {
-      background-color: #007bff;
-      /* Primary blue color */
-      color: white;
-      /* White text for contrast */
-      border: 2px solid transparent;
-      /* Transparent border to maintain the button size on hover */
-      padding: 10px 20px;
-      /* Comfortable padding */
-      border-radius: 30px;
-      /* Rounded pill shape */
-      font-weight: bold;
-      /* Bold text */
-      text-transform: capitalize;
-      /* Capitalize text for a softer look */
-      transition: all 0.3s ease;
-      /* Smooth transition for hover effects */
-      cursor: pointer;
-      /* Cursor changes to pointer on hover */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      /* Subtle shadow for depth */
-    }
-
-    .btn-know-more:hover,
-    .btn-know-more:focus {
-      background-color: #0056b3;
-      /* Slightly darker blue on hover/focus */
-      border-color: #0056b3;
-      /* Border color changes to match the background */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      /* Enhanced shadow for depth */
-      color: #ffffff;
-      /* Ensuring text color remains white */
-    }
-
-    .btn-know-more:active {
-      background-color: #00448f;
-      /* Even darker for active state */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      /* Reduced shadow for pressed effect */
-    }
+typeText();
 
 
-    /* Accordion Header Styling */
-    .blue-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #007bff;
-      /* Blue border at the bottom of the header */
-    }
-
-    .blue-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .green-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #00ff59;
-      /* Blue border at the bottom of the header */
-    }
-
-    .green-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .company-logo {
-      width: 100px;
-      /* Adjust size as needed */
-      height: auto;
-    }
-
-    .highlight-list {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-  </style>
-</head>
-
-
-
-
-    <h2>Professional Experience</h2>
-    <div class="container mt-5">
-      <div class="row">
-        <!-- Professional Details and Highlights Column -->
-        <div class="col-md-10">
-          <h3>AI Researcher, AI Hub, Canada (AI/HUB)</h3>
-          <p>2023 – Present</p>
-
-          <p><strong>Highlights:</strong></p>
-          <ul class="highlight-list">
-            <li>Crafted LLM reports for a roster of close to 10 clients, enhancing business outreach and solutions.</li>
-            <li>Demonstrated exceptional research acumen that garnered <a
-                href="https://durhamcollege.ca/new-notable/durham-colleges-ai-hub-leads-the-way-with-comprehensive-support-for-local-organizations-introducing-ai-powered-technologies">a
-                $1.75 million grant from TAC for the company.</a></li>
-            <li>Engineered integrated banking, retail, and e-commerce solutions that significantly increased business
-              profitability.</li>
-          </ul>
-        </div>
-
-         <!-- Company Logo Column -->
-         <div class="col-md-2">
-          <img src="assets/img/projects/aihub.png" alt="AI Hub Logo" class="company-logo">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- First Accordion in First Column -->
-      <div class="col-md-6">
-        <div id="accordion1">
-          <div class="card">
-            <div class="card-header red-accordion" id="headingOne1" data-toggle="collapse" data-target="#collapseOne1"
-              aria-expanded="false" aria-controls="collapseOne1">
-              <h5 class="mb-0">Course Recommendation</h5>
-              <span class="industry-type">Education</span>
-            </div>
-            <div id="collapseOne1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingOne1"
-              data-parent="#accordion1">
-              <div class="card-body">
-                <div class="project">
-                  <img src="assets/img/projects/course_recommendations.jpeg" alt="Course Recommendations Project"
-                    style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
-                  <p>This project involved creating an intelligent course recommendation system for an e-commerce
-                    platform specializing in educational content. The goal was to enhance user experience by providing
-                    personalized course suggestions, thereby increasing engagement and sales.</p>
-                  <h6>Key Acheivements</h6>
-                  <ul>
-                    <li>
-                      Designed a recommendation system for an education sector client, achieving a 20% increase in
-                      lesson engagement and a 15% growth in new subscriptions, substantially elevating revenue.
-                    </li>
-                    <li>
-                      This strategic implementation led to marked improvements in course enrollment and completion,
-                      contributing to a significant revenue boost for the company.
-                    </li>
-                  </ul>
-                  <!-- Project details -->
-                  <p class="technologies">Technologies: Hybrid Models, Python, Reporting, Flask, HTML, JavaScript</p>
-                  <!-- "Know More" Button -->
-                  <button type="button" class="btn btn-know-more">Know More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Second Accordion in Second Column -->
-      <div class="col-md-6">
-        <div id="accordion2">
-          <div class="card">
-            <div class="card-header blue-accordion" id="headingTwo1" data-toggle="collapse" data-target="#collapseTwo1"
-              aria-expanded="false" aria-controls="collapseTwo1">
-              <h5 class="mb-0">Digital Human Avatars</h5>
-              <span class="industry-type">Virtual Reality</span>
-            </div>
-            <div id="collapseTwo1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingTwo1"
-              data-parent="#accordion2">
-              <div class="card-body">
-                <div class="project">
-                  <img src="assets/img/projects/virtual_humans.jpeg" alt="Digital Human Avatars Project"
-                    style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
-                  <p>Leading the development of lifelike digital human avatars in virtual reality, this project involved
-                    creating realistic and interactive AI-driven avatars for immersive experiences.</p>
-                  <h6>Key Achievements</h6>
-                  <ul>
-                    <li>
-                      Utilized advanced datasets to create highly realistic digital human models, enhancing the
-                      immersive experience in virtual reality.
-                    </li>
-                    <li>
-                      Developed natural language and gesture recognition capabilities, enabling intuitive interactions
-                      with the avatars.
-                    </li>
-                  </ul>
-                  <p class="technologies">Technologies: Unity 3D, Machine Learning, AI, 3D Modeling</p>
-                  <button type="button" class="btn btn-know-more">Know More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- First Accordion in First Column -->
-      <div class="col-md-6">
-          <div id="accordionHouseMarketing">
-              <div class="card">
-                  <div class="card-header blue-accordion" id="headingHouseMarketing" data-toggle="collapse" data-target="#collapseHouseMarketing" aria-expanded="false" aria-controls="collapseHouseMarketing">
-                      <h5 class="mb-0">House Marketing Analysis</h5>
-                      <span class="industry-type">Real Estate Analysis</span>
-                  </div>
-                  <div id="collapseHouseMarketing" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingHouseMarketing" data-parent="#accordionHouseMarketing">
-                      <div class="card-body">
-                          <div class="project">
-                            <h6>Key accomplishments</h6>
-                            <ul>
-                              <li>Developed a housing market predictive model with 85% accuracy, identifying key price influencers and aiding investor and policy decisions.</p>
-                              <li>Analyzed supply-demand in major cities, finding mismatches that informed targeted housing development recommendations.</p>
-                              <li>Discovered a direct correlation between economic indicators and housing prices, crucial for investment timing and policy planning.</p>
-                              </ul>
-                                <p class="technologies">Technologies: Linear Regression, Decision Trees, Random Forest, Python, Pandas, NumPy, Scikit-Learn, SQL, Data Visualization (Tableau/Power BI), Flask, HTML, JavaScript, RESTful API</p>
-                              <button type="button" class="btn btn-know-more">Know More</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  
-  </div>
-
-
-
-  
-
-    
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-</html>
+</script>

@@ -379,3 +379,5 @@ var userMove;
             // Display the result
             document.getElementById('result').innerHTML = 'You chose ' + userMove + ', sai chose ' + computerMove + '. ' + result;
         }
+
+

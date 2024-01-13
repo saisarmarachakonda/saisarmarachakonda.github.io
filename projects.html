@@ -2,400 +2,858 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!--==================== FAVICON ====================-->
+  <link rel="icon" href="assets/img/favicon.png">
 
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--==================== UNICONS ====================-->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <!--==================== FAVICON ====================-->
-    <link rel="icon" href="assets/img/favicon.png">
+  <!--==================== SWIPER CSS ====================-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-    <!--==================== UNICONS ====================-->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <!--==================== CSS ====================-->
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-    <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-
-    <!--    =========== Tracker =========      -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NYWM62ET3"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-2NYWM62ET3');
-    </script>
-    <title>Personal Projects</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-  <style>
-    /* General Accordion Styling */
-    .card {
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-      /* Light grey border for the entire card */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      /* Subtle shadow for depth */
-    }
-
-    /* Accordion Header Styling */
-    .red-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid red;
-      /* Red border at the bottom of the header */
-    }
-
-    .red-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .industry-type {
-      font-size: 14px;
-      font-weight: bold;
-      color: #888;
-      /* Lighter color for the industry type */
-    }
-
-    /* Accordion Body Styling */
-    .card-body {
-      background-color: white;
-      padding: 15px;
-    }
-
-    /* Styling for collapsed accordion headers */
-    .red-accordion.collapsed {
-      background-color: #fff;
-      /* White background when collapsed */
-      color: #333;
-      /* Default text color */
-    }
-
-    /* Cursor pointer for headers */
-    .red-accordion:hover {
-      cursor: pointer;
-    }
-
-    /* Enhanced Technology List Styling */
-    .technologies {
-      padding-top: 10px;
-      font-style: italic;
-      color: #555;
-    }
-
-    .btn-know-more {
-      background-color: #007bff;
-      /* Primary blue color */
-      color: white;
-      /* White text for contrast */
-      border: 2px solid transparent;
-      /* Transparent border to maintain the button size on hover */
-      padding: 10px 20px;
-      /* Comfortable padding */
-      border-radius: 30px;
-      /* Rounded pill shape */
-      font-weight: bold;
-      /* Bold text */
-      text-transform: capitalize;
-      /* Capitalize text for a softer look */
-      transition: all 0.3s ease;
-      /* Smooth transition for hover effects */
-      cursor: pointer;
-      /* Cursor changes to pointer on hover */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      /* Subtle shadow for depth */
-    }
-
-    .btn-know-more:hover,
-    .btn-know-more:focus {
-      background-color: #0056b3;
-      /* Slightly darker blue on hover/focus */
-      border-color: #0056b3;
-      /* Border color changes to match the background */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      /* Enhanced shadow for depth */
-      color: #ffffff;
-      /* Ensuring text color remains white */
-    }
-
-    .btn-know-more:active {
-      background-color: #00448f;
-      /* Even darker for active state */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-      /* Reduced shadow for pressed effect */
-    }
-
-
-    /* Accordion Header Styling */
-    .blue-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #007bff;
-      /* Blue border at the bottom of the header */
-    }
-
-    .blue-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .green-accordion {
-      padding: 10px;
-      border: none;
-      /* Removes the default border */
-      background-color: #f8f9fa;
-      /* Light background for the header */
-      color: #333;
-      /* Darker text color for contrast */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 2px solid #00ff59;
-      /* Blue border at the bottom of the header */
-    }
-
-    .green-accordion h5 {
-      margin: 0;
-      /* Removes default margin */
-      font-size: 18px;
-      /* Slightly larger font size for the title */
-    }
-
-    .company-logo {
-      width: 100px;
-      /* Adjust size as needed */
-      height: auto;
-    }
-
-    .highlight-list {
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-  </style>
+  <!--    =========== Tracker =========      -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2NYWM62ET3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-2NYWM62ET3');
+  </script>
+  <title>Personal Projects</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <link href="assets/css/projects.css" rel="stylesheet">
 </head>
 <header class="header" id="header">
   <nav class="nav container">
-      <a href="#">
-          <span style="display: flex; align-items: center;">
-              <img class="nav__logo" src="assets/img/About/superman.webp" width="50rem">
-              <sup style="margin-bottom: 2rem;">AI</sup>
-          </span>
-      </a>
+    <a href="index.html#">
+      <span style="display: flex; align-items: center;">
+        <img class="nav__logo" src="assets/img/About/superman.webp" width="50rem">
+        <sup style="margin-bottom: 2rem;">AI</sup>
+      </span>
+    </a>
 
 
-      <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list grid">
-              <li class="nav__item">
-                  <a href="#home" class="nav__link active-link">
-                      <i class="uil uil-estate nav__icon"></i> Home
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#about" class="nav__link">
-                      <i class="uil uil-user nav__icon"></i> About
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#skills" class="nav__link">
-                      <i class="uil uil-file-alt nav__icon"></i> Skills
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#portfolio" class="nav__link">
-                      <i class="uil uil-scenery nav__icon"></i> Portfolio
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#research" class="nav__link">
-                      <i class="uil uil-briefcase nav__icon"></i> Research
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="index.html#certification" class="nav__link">
-                      <i class="uil uil-newspaper nav__icon"></i> Certifications
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#blog" class="nav__link">
-                      <i class="uil uil-edit nav__icon"></i> Blog
-                  </a>
-              </li>
-              <li class="nav__item">
-                  <a href="#contact" class="nav__link">
-                      <i class="uil uil-message nav__icon"></i> Contact
-                  </a>
-              </li>
-          </ul>
-          <i class="uil uil-times nav__close" id="nav-close"></i>
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list grid">
+        <li class="nav__item">
+          <a href="index.html#home" class="nav__link active-link">
+            <i class="uil uil-estate nav__icon"></i> Home
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#about" class="nav__link">
+            <i class="uil uil-user nav__icon"></i> About
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#skills" class="nav__link">
+            <i class="uil uil-file-alt nav__icon"></i> Skills
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#portfolio" class="nav__link">
+            <i class="uil uil-scenery nav__icon"></i> Portfolio
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#research" class="nav__link">
+            <i class="uil uil-briefcase nav__icon"></i> Research
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#certification" class="nav__link">
+            <i class="uil uil-newspaper nav__icon"></i> Certifications
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#blog" class="nav__link">
+            <i class="uil uil-edit nav__icon"></i> Blog
+          </a>
+        </li>
+        <li class="nav__item">
+          <a href="index.html#contact" class="nav__link">
+            <i class="uil uil-message nav__icon"></i> Contact
+          </a>
+        </li>
+      </ul>
+      <i class="uil uil-times nav__close" id="nav-close"></i>
+    </div>
+
+    <div class="nav__btns">
+      <!-- Theme change button -->
+      <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+      <div class="nav__toggle" id="nav-toggle">
+        <i class="uil uil-apps"></i>
       </div>
-
-      <div class="nav__btns">
-          <!-- Theme change button -->
-          <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-          <div class="nav__toggle" id="nav-toggle">
-              <i class="uil uil-apps"></i>
-          </div>
-      </div>
+    </div>
   </nav>
 </header>
+
 <body>
-  
-<main style="margin-top: 5rem;">
+
+  <main style="margin-top: 5rem;">
 
 
-  <div class="container mt-5">
-    <h2>Professional Experience</h2>
     <div class="container mt-5">
+      <h2>Professional Experience</h2>
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Professional Details and Highlights Column -->
+          <div class="col-md-10">
+            <h3>AI Researcher, AI Hub, Canada (AI/HUB)</h3>
+            <p>2023 – Present</p>
+
+            <p><strong>Highlights:</strong></p>
+            <ul class="highlight-list">
+              <li>Crafted LLM reports for a roster of close to 10 clients, enhancing business outreach and solutions.
+              </li>
+              <li>Demonstrated exceptional research acumen that garnered <a
+                  href="https://durhamcollege.ca/new-notable/durham-colleges-ai-hub-leads-the-way-with-comprehensive-support-for-local-organizations-introducing-ai-powered-technologies">a
+                  $1.75 million grant from TAC for the company.</a></li>
+              <li>Engineered integrated banking, retail, and e-commerce solutions that significantly increased business
+                profitability.</li>
+            </ul>
+          </div>
+
+          <!-- Company Logo Column -->
+          <div class="col-md-2">
+            <img src="assets/img/projects/aihub.png" alt="AI Hub Logo" class="company-logo">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion1">
+            <div class="card">
+              <div class="card-header red-accordion" id="headingOne1" data-toggle="collapse" data-target="#collapseOne1"
+                aria-expanded="false" aria-controls="collapseOne1">
+                <h5 class="mb-0">Course Recommendation</h5>
+                <span class="industry-type">Education</span>
+              </div>
+              <div id="collapseOne1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingOne1"
+                data-parent="#accordion1">
+                <div class="card-body">
+                  <div class="project">
+                    <img src="assets/img/projects/course_recommendations.jpeg" alt="Course Recommendations Project"
+                      style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
+                    <p>This project involved creating an intelligent course recommendation system for an e-commerce
+                      platform specializing in educational content. The goal was to enhance user experience by providing
+                      personalized course suggestions, thereby increasing engagement and sales.</p>
+                    <h6>Key Acheivements</h6>
+                    <ul>
+                      <li>
+                        Designed a recommendation system for an education sector client, achieving a 20% increase in
+                        lesson engagement and a 15% growth in new subscriptions, substantially elevating revenue.
+                      </li>
+                      <li>
+                        This strategic implementation led to marked improvements in course enrollment and completion,
+                        contributing to a significant revenue boost for the company.
+                      </li>
+                    </ul>
+                    <!-- Project details -->
+                    <p class="technologies">Technologies: Hybrid Models, Python, Reporting, Flask, HTML, JavaScript</p>
+                    <!-- "Know More" Button -->
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="accordion2">
+            <div class="card">
+              <div class="card-header blue-accordion" id="headingTwo1" data-toggle="collapse"
+                data-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo1">
+                <h5 class="mb-0">Digital Human Avatars</h5>
+                <span class="industry-type">Virtual Reality</span>
+              </div>
+              <div id="collapseTwo1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingTwo1"
+                data-parent="#accordion2">
+                <div class="card-body">
+                  <div class="project">
+                    <img src="assets/img/projects/virtual_humans.jpeg" alt="Digital Human Avatars Project"
+                      style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
+                    <p>Leading the development of lifelike digital human avatars in virtual reality, this project
+                      involved
+                      creating realistic and interactive AI-driven avatars for immersive experiences.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>
+                        Utilized advanced datasets to create highly realistic digital human models, enhancing the
+                        immersive experience in virtual reality.
+                      </li>
+                      <li>
+                        Developed natural language and gesture recognition capabilities, enabling intuitive interactions
+                        with the avatars.
+                      </li>
+                    </ul>
+                    <p class="technologies">Technologies: Unity 3D, Machine Learning, AI, 3D Modeling</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordionHouseMarketing">
+            <div class="card">
+              <div class="card-header blue-accordion" id="headingHouseMarketing" data-toggle="collapse"
+                data-target="#collapseHouseMarketing" aria-expanded="false" aria-controls="collapseHouseMarketing">
+                <h5 class="mb-0">House Marketing Analysis</h5>
+                <span class="industry-type">Home Loan Analysis</span>
+              </div>
+              <div id="collapseHouseMarketing" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingHouseMarketing" data-parent="#accordionHouseMarketing">
+                <div class="card-body">
+                  <div class="project">
+                    <h6>Key accomplishments</h6>
+                    <ul>
+                      <li>Developed a housing market predictive model with 85% accuracy, identifying key price
+                        influencers and aiding investor and policy decisions.</p>
+                      <li>Analyzed supply-demand in major cities, finding mismatches that informed targeted housing
+                        development recommendations.</p>
+                      <li>Discovered a direct correlation between economic indicators and housing prices, crucial for
+                        investment timing and policy planning.</p>
+                    </ul>
+                    <p class="technologies">Technologies: Linear Regression, Decision Trees, Random Forest, Python,
+                      Pandas, NumPy, Scikit-Learn, SQL, Data Visualization (Tableau/Power BI), Flask, HTML, JavaScript,
+                      RESTful API</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="accordion19">
+            <div class="card">
+              <div class="card-header orange-accordion adjustable-header" id="headingNineteen1" data-toggle="collapse"
+                data-target="#collapseNineteen1" aria-expanded="false" aria-controls="collapseNineteen1">
+                <h5 class="mb-0">SQL Query Optimization and Report Generation using LLM</h5>
+                <span class="industry-type">Retail</span>
+              </div>
+              <div id="collapseNineteen1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingNineteen1" data-parent="#accordion19">
+                <div class="card-body">
+                  <div class="project">
+                    <p>This project involved optimizing SQL queries and automating SQL report generation processes
+                      using advanced Large Language Models (LLM). The goal was to streamline data retrieval and
+                      reporting procedures, enhancing efficiency and accuracy in data analysis tasks.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Developed efficient SQL query optimization techniques, significantly reducing data retrieval
+                        times and improving database performance.</li>
+                      <li>Automated complex SQL report generation, leveraging LLM to facilitate faster and more
+                        accurate data analysis and reporting.</li>
+                      <li>Successfully integrated LLM with SQL databases to create a more dynamic and responsive data
+                        analysis framework.</li>
+                    </ul>
+                    <p class="technologies">Technologies: SQL, Large Language Models (LLM), Database Optimization,
+                      Automated Reporting</p>
+                    <iframe src="https://drive.google.com/file/d/1JwqSgp9GcJD-wmKwizVReg8reCeAU6Wy/preview"
+                      width="100%" height="480"></iframe>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+       
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="accordion17">
+              <div class="card">
+                <div class="card-header purple-accordion" id="headingSeventeen1" data-toggle="collapse"
+                  data-target="#collapseSeventeen1" aria-expanded="false" aria-controls="collapseSeventeen1">
+                  <h5 class="mb-0">Automation of Text Extraction from Clinical Reports & LLM Process</h5>
+                  <span class="industry-type">Healthcare Technology</span>
+                </div>
+                <div id="collapseSeventeen1" class="collapse animate__animated animate__fadeIn"
+                  aria-labelledby="headingSeventeen1" data-parent="#accordion17">
+                  <div class="card-body">
+                    <div class="project">
+                      <p>This project focused on automating the extraction of pertinent information from clinical
+                        reports using advanced text processing techniques, and enhancing Large Language Model (LLM)
+                        processes for improved data analysis and decision-making in healthcare.</p>
+                      <h6>Key Achievements</h6>
+                      <ul>
+                        <li>Implemented cutting-edge text extraction methodologies to efficiently parse and interpret
+                          clinical report data.</li>
+                        <li>Enhanced LLM processes to facilitate more accurate and insightful data analysis, aiding in
+                          medical research and patient care decisions.</li>
+                        <li>Successfully integrated automated systems, reducing manual workload and improving the speed
+                          and accuracy of clinical data processing.</li>
+                      </ul>
+                      <p class="technologies">Technologies: Natural Language Processing, Large Language Models, Data
+                        Extraction, Healthcare Informatics</p>
+                      <iframe src="https://drive.google.com/file/d/1EOEd9EW553njVi2FLJktuD2-9rNxXh09/preview"
+                        width="100%" height="480"></iframe>
+                      <button type="button" class="btn btn-know-more">Know More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="accordion14">
+              <div class="card">
+                <div class="card-header orange-accordion" id="headingFourteen1" data-toggle="collapse"
+                  data-target="#collapseFourteen1" aria-expanded="false" aria-controls="collapseFourteen1">
+                  <h5 class="mb-0">Automate Recommendations using chatbot, LLM and Mails</h5>
+                  <span class="industry-type">Retail</span>
+                </div>
+                <div id="collapseFourteen1" class="collapse animate__animated animate__fadeIn"
+                  aria-labelledby="headingFourteen1" data-parent="#accordion14">
+                  <div class="card-body">
+                    <div class="project">
+                      <p>This project involved creating an advisory report for automating product recommendations in
+                        retail through chatbot interactions. The project leveraged advanced AI technologies, including
+                        Large Language Models (LLM) and the Azure Bot Framework, to analyze customer queries and provide
+                        personalized product suggestions.</p>
+                      <h6>Key Achievements</h6>
+                      <ul>
+                        <li>Implemented AI-driven chatbots using LLM and Azure Bot Framework to effectively analyze and
+                          respond to customer interactions.</li>
+                        <li>Automated product recommendation system which enhanced customer engagement and increased sales
+                          metrics.</li>
+                        <li>Prepared an extensive report detailing the integration process, challenges, and benefits of
+                          using advanced AI in retail environments.</li>
+                      </ul>
+                      <p class="technologies">Technologies: AI, Large Language Models, Azure Bot Framework, Machine
+                        Learning, Data Analytics</p>
+                      <iframe src="https://drive.google.com/file/d/1t0T9LSy7AXb6PTcTHYQKE2jOCyrqkf3X/preview" width="100%"
+                        height="480"></iframe>
+                      <button type="button" class="btn btn-know-more">Know More</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+
+        </div>
+
+      </div>
+  
+
+
+      <!-- Tiger Analytics-->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Professional Details and Highlights Column -->
+          <div class="col-md-10">
+            <h3>Data Scientist, Tiger Analytics</h3>
+            <p>2019 – 2023</p>
+
+            <p><strong>Highlights:</strong></p>
+            <ul class="highlight-list">
+              <li>Mentoring initiative for the team, fostering skill and team development.</li>
+              <li>Revamped retail demand forecasting, automating over 40 models for sales and workforce management in
+                450 stores.</li>
+              <li>Enhanced insurance fraud detection with a achieving a 30% referral acceptance rate in SIU.</li>
+              <li>Optimized insurance claims triage, leading to a 15% process efficiency gain with ensembled model
+                solution.</li>
+            </ul>
+          </div>
+
+          <!-- Company Logo Column -->
+          <div class="col-md-2">
+            <!-- Replace 'path_to_logo.png' with the actual path to your company logo -->
+            <img src="assets/img/projects/tiger.png" alt="Tiger Analytics Logo" class="company-logo">
+          </div>
+        </div>
+      
+
+      <div class="row">
+        <!-- Demand Forecasting Column -->
+        <div class="col-md-6">
+          <div id="accordion3">
+            <div class="card">
+              <div class="card-header orange-accordion" id="headingThree1" data-toggle="collapse"
+                data-target="#collapseThree1" aria-expanded="false" aria-controls="collapseThree1">
+                <h5 class="mb-0">Demand Forecasting</h5>
+                <span class="industry-type">Consumer Packaged Goods</span>
+              </div>
+              <div id="collapseThree1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingThree1" data-parent="#accordion3">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Developed comprehensive labor forecasting models for a key CPG client, enhancing inventory and
+                      sales strategy planning.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Constructed and automated labor forecasting models for 60 stores, successfully expanding the
+                        process to 450 stores for streamlined workforce management.</li>
+                      <li>Created sophisticated forecasting models for transactions, gross sales, item quantities, and
+                        Limited Time Offer (LTO) items, optimizing product availability and sales opportunities.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Prophet, Deep AR, SARIMAX, AWS Sagemaker, Python, Tableau,
+                      Reporting</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog Management Column -->
+        <div class="col-md-6">
+          <div id="accordion4">
+            <div class="card">
+              <div class="card-header orange-accordion" id="headingFour1" data-toggle="collapse"
+                data-target="#collapseFour1" aria-expanded="false" aria-controls="collapseFour1">
+                <h5 class="mb-0">Catalog Management, Retail</h5>
+                <span class="industry-type">Retail</span>
+              </div>
+              <div id="collapseFour1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingFour1"
+                data-parent="#accordion4">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Re-engineered real-time demand and response models for clothing and accessories in the retail
+                      sector, enhancing catalog management and market adaptability.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Redefined modeling techniques using Sagemaker, developing over 40 classification and
+                        regression models to optimize catalog accuracy and customer targeting.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Boosting classifiers, Regressors, PySpark, AWS Sagemaker,
+                      DevOps, Tableau</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion5">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingFive1" data-toggle="collapse"
+                data-target="#collapseFive1" aria-expanded="false" aria-controls="collapseFive1">
+                <h5 class="mb-0">Auto Fraud Detection</h5>
+                <span class="industry-type">Auto Insurance</span>
+              </div>
+              <div id="collapseFive1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingFive1"
+                data-parent="#accordion5">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Developed an innovative fraud detection model for auto bodily injury claims, significantly
+                      enhancing fraud detection and improving operational efficiency in Special Investigation Units
+                      (SIU) and Claims Review Offices (CRO).</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Enhanced the insurance fraud detection system, effectively reducing false positives and
+                        increasing the acceptance rate of non-fraudulent claims by 30%.</li>
+                      <li>Facilitated round table discussions to develop business rules, crucial for strengthening the
+                        insurance company's fraud mitigation strategies.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Boosting Classifiers, Python, Tableau, Reporting, AWS EMR,
+                      Oracle SQL</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="accordion6">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingSix1" data-toggle="collapse"
+                data-target="#collapseSix1" aria-expanded="false" aria-controls="collapseSix1">
+                <h5 class="mb-0">Automating Underwriting Processes</h5>
+                <span class="industry-type">Health Insurance</span>
+              </div>
+              <div id="collapseSix1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingSix1"
+                data-parent="#accordion6">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Revolutionized underwriting processes by automating data pipeline workflows, significantly
+                      streamlining the analysis of large volumes of applicant data for more accurate and efficient risk
+                      assessment in health insurance underwriting.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Achieved a 40% reduction in data processing time and a 30% increase in the speed of risk
+                        assessment, leading to a 25% improvement in overall underwriting efficiency.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Python, Pandas, SQL, AWS Lambda, AWS S3, Logistic Regression,
+                      XG Boost Classifier</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion7">
+            <div class="card">
+              <div class="card-header blue-accordion" id="headingSeven1" data-toggle="collapse"
+                data-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">
+                <h5 class="mb-0">Home Loan Defaulter</h5>
+                <span class="industry-type">Banking</span>
+              </div>
+              <div id="collapseSeven1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingSeven1" data-parent="#accordion7">
+                <div class="card-body">
+                  <div class="project">
+                    <p>This project involved developing a predictive analytics model focusing on home loan defaults. By
+                      analyzing three years of data from 50,000 home loan accounts and identifying key predictors like
+                      credit score and debt-to-income ratio, we implemented logistic regression and random forest
+                      algorithms to effectively predict potential loan defaulters.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Achieved 78% accuracy in predicting potential loan defaulters, leading to a 15% reduction in
+                        new bad loans, thereby bolstering the bank's risk mitigation and financial stability.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Python, Pandas, SQL, AWS Lambda, AWS S3, Logistic Regression,
+                      XG Boost Classifier</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="accordion8">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingEight1" data-toggle="collapse"
+                data-target="#collapseEight1" aria-expanded="false" aria-controls="collapseEight1">
+                <h5 class="mb-0">Auto Liabilities Risk Assessment</h5>
+                <span class="industry-type">Auto Insurance</span>
+              </div>
+              <div id="collapseEight1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingEight1" data-parent="#accordion8">
+                <div class="card-body">
+                  <div class="project">
+                    <p>The project aimed at automating and refining the process of liabilities risk assessment in auto
+                      insurance. We introduced an advanced, automated triage solution that facilitated a significant
+                      shift of claims from complex systems to more centralized services. This was achieved through a
+                      comprehensive analysis of patterns in Physical Damages, Insured Liabilities, and Subrogation
+                      Potential.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Developed three sophisticated predictive models, integrated into an ensemble Rule-Based
+                        Classification (RBC) system, supported by a specialized dashboard to enhance data visualization
+                        and decision-making processes.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Gradient Boosting Classifiers, Regressors, Python, Tableau,
+                      Reporting, AWS EMR, Oracle SQL</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion9">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingNine1" data-toggle="collapse"
+                data-target="#collapseNine1" aria-expanded="false" aria-controls="collapseNine1">
+                <h5 class="mb-0">Auto Subrogation Risk Assessment</h5>
+                <span class="industry-type">Auto Insurance</span>
+              </div>
+              <div id="collapseNine1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingNine1"
+                data-parent="#accordion9">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Tasked with retraining and enhancing the Auto Subrogation Suite, this project aimed at
+                      revolutionizing the auto insurance sector's approach to claim handling efficiency. The initiative
+                      involved a comprehensive update and management of several models including those for Subrogation
+                      Auto Collision, Medical Pay, and Early Intervention claims.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Significantly improved model accuracy and claim identification by 10% through innovative rule
+                        modifications and model retraining.</li>
+                      <li>Successfully established automated pipelines and advanced dashboards, thereby streamlining
+                        operations and enhancing data-driven decision-making.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Gradient Boosting Classifiers, Python, Tableau, Reporting, AWS
+                      EMR, Oracle SQL</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="accordion10">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingTen1" data-toggle="collapse"
+                data-target="#collapseTen1" aria-expanded="false" aria-controls="collapseTen1">
+                <h5 class="mb-0">Property Salvage Recovery</h5>
+                <span class="industry-type">Property Insurance</span>
+              </div>
+              <div id="collapseTen1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingTen1"
+                data-parent="#accordion10">
+                <div class="card-body">
+                  <div class="project">
+                    <p>This project was centered around enhancing the Property Salvage Model, with a special focus on
+                      improving the model's performance in post-deployment scenarios. The role involved deep
+                      investigations into model failures in varied cases like fire claims, vandalism, and natural
+                      disasters, identifying root causes and rectifying them.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Designed and implemented a robust model pipeline that significantly boosted post-deployment
+                        performance, especially in complex claim scenarios.</li>
+                      <li>Created a comprehensive Tableau dashboard for more efficient and seamless data analysis,
+                        aiding in effective salvage recovery strategies.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Gradient Boosting Classifiers, Regressors, Python, Tableau,
+                      Reporting, AWS EMR, Oracle SQL</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion11">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingEleven1" data-toggle="collapse"
+                data-target="#collapseEleven1" aria-expanded="false" aria-controls="collapseEleven1">
+                <h5 class="mb-0">Property Subrogation Recovery</h5>
+                <span class="industry-type">Property Insurance</span>
+              </div>
+              <div id="collapseEleven1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingEleven1" data-parent="#accordion11">
+                <div class="card-body">
+                  <div class="project">
+                    <p>Undertook a significant project to enhance the Property Subrogation Model, aiming to
+                      revolutionize claim recovery processes in property insurance. This included the development of an
+                      automated modeling pipeline to streamline operations and the integration of a Tableau dashboard
+                      for efficient data analysis.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Successfully achieved a 10% increase in potential subrogation recoveries by refining
+                        thresholds based on detailed insights garnered from the production model.</li>
+                      <li>Developed an advanced automated pipeline and integrated a comprehensive Tableau dashboard,
+                        significantly enhancing data analysis and operational efficiency.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Gradient Boosting Classifiers, Regressors, Python, Tableau,
+                      Reporting, AWS EMR, Oracle SQL</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+      <!-- Open Access Technology India -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Professional Details and Highlights Column -->
+          <div class="col-md-10">
+            <h3>Data Scientist, Open Access Technology India</h3>
+            <p>2018 – 2019</p>
+
+            <p><strong>Highlights:</strong></p>
+            <ul class="highlight-list">
+              <li>Developed predictive models for an energy company, enhancing forecasting accuracy by 30% in energy
+                demand and production.</li>
+              <li>Innovated energy forecasting algorithms, yielding a 25% improvement in resource allocation and grid
+                management.</li>
+              <li>Created a conceptual AR application for an energy client, enhancing field experience with detailed
+                guidance for seamless rectification of field operations.</li>
+            </ul>
+          </div>
+
+          <!-- Company Logo Column -->
+          <div class="col-md-2">
+            <!-- Replace 'path_to_logo.png' with the actual path to your company logo -->
+            <img src="assets/img/projects/oati.png" alt="Open Access Technology India Logo" class="company-logo">
+          </div>
+        </div>
+      
+
+      <div class="row">
+        <div class="col-md-6">
+          <div id="accordion12">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingTwelve1" data-toggle="collapse"
+                data-target="#collapseTwelve1" aria-expanded="false" aria-controls="collapseTwelve1">
+                <h5 class="mb-0">Energy Demand and Production Forecasting</h5>
+                <span class="industry-type">Energy Sector</span>
+              </div>
+              <div id="collapseTwelve1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingTwelve1" data-parent="#accordion12">
+                <div class="card-body">
+                  <div class="project">
+                    <p>This project focused on developing predictive models for an energy company, aiming to enhance the
+                      accuracy of forecasting in energy demand and production. The project utilized advanced data
+                      analytics and machine learning techniques to address challenges in energy forecasting.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Enhanced forecasting accuracy by 30%, significantly improving predictions in energy demand and
+                        production.</li>
+                      <li>Implemented sophisticated predictive modeling techniques to analyze historical energy
+                        consumption data and various influencing factors.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Machine Learning, Python, Data Analytics</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div id="accordion13">
+            <div class="card">
+              <div class="card-header purple-accordion" id="headingThirteen1" data-toggle="collapse"
+                data-target="#collapseThirteen1" aria-expanded="false" aria-controls="collapseThirteen1">
+                <h5 class="mb-0">Conceptual AR App for Field Operations</h5>
+                <span class="industry-type">Energy Sector</span>
+              </div>
+              <div id="collapseThirteen1" class="collapse animate__animated animate__fadeIn"
+                aria-labelledby="headingThirteen1" data-parent="#accordion13">
+                <div class="card-body">
+                  <div class="project">
+                    <p>This innovative project involved creating a conceptual AR (Augmented Reality) application
+                      tailored for a client in the energy sector. The application was designed to enhance the field
+                      experience by providing detailed, interactive guidance, thereby facilitating seamless
+                      rectification and optimization of field operations.</p>
+                    <h6>Key Achievements</h6>
+                    <ul>
+                      <li>Developed an AR application that significantly improved field operation efficiency through
+                        immersive and interactive guidance.</li>
+                      <li>Played a key role in integrating real-time data and analytics into the AR environment,
+                        enhancing decision-making processes in field operations.</li>
+                    </ul>
+                    <p class="technologies">Technologies: Augmented Reality, Interactive Design, Real-Time Data
+                      Integration</p>
+                    <button type="button" class="btn btn-know-more">Know More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="container mt-5">
       <div class="row">
         <!-- Professional Details and Highlights Column -->
         <div class="col-md-10">
-          <h3>AI Researcher, AI Hub, Canada (AI/HUB)</h3>
-          <p>2023 – Present</p>
-
-          <p><strong>Highlights:</strong></p>
-          <ul class="highlight-list">
-            <li>Crafted LLM reports for a roster of close to 10 clients, enhancing business outreach and solutions.</li>
-            <li>Demonstrated exceptional research acumen that garnered <a
-                href="https://durhamcollege.ca/new-notable/durham-colleges-ai-hub-leads-the-way-with-comprehensive-support-for-local-organizations-introducing-ai-powered-technologies">a
-                $1.75 million grant from TAC for the company.</a></li>
-            <li>Engineered integrated banking, retail, and e-commerce solutions that significantly increased business
-              profitability.</li>
-          </ul>
+            <h3>Software Engineer, Data Science, ProArch IT Solutions</h3>
+            <p>2016 – 2018</p>
+    
+            <p><strong>Highlights:</strong></p>
+            <ul class="highlight-list">
+              <li>Developed an innovative chatbot for administrator-level tasks, improving ticket resolution efficiency.</li>
+            <li>Created an AR application for a retail client, enhancing in-store customer experience and engagement.</li>
+            <li>Actively participated as part of the presales team, contributing to data science and VR proof of concept (POC) projects.</li>
+            <li>Engaged in high-level meetings, including stakeholders and CEO calls, providing valuable insights and technical expertise.</li>
+            <li>Worked extensively with diverse technologies including Angular, Python, Node.js, Unity 3D, and C# MVC Core.</li>
+            </ul>
         </div>
-
-         <!-- Company Logo Column -->
-         <div class="col-md-2">
-          <img src="assets/img/projects/aihub.png" alt="AI Hub Logo" class="company-logo">
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <!-- First Accordion in First Column -->
-      <div class="col-md-6">
-        <div id="accordion1">
-          <div class="card">
-            <div class="card-header red-accordion" id="headingOne1" data-toggle="collapse" data-target="#collapseOne1"
-              aria-expanded="false" aria-controls="collapseOne1">
-              <h5 class="mb-0">Course Recommendation</h5>
-              <span class="industry-type">Education</span>
-            </div>
-            <div id="collapseOne1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingOne1"
-              data-parent="#accordion1">
-              <div class="card-body">
-                <div class="project">
-                  <img src="assets/img/projects/course_recommendations.jpeg" alt="Course Recommendations Project"
-                    style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
-                  <p>This project involved creating an intelligent course recommendation system for an e-commerce
-                    platform specializing in educational content. The goal was to enhance user experience by providing
-                    personalized course suggestions, thereby increasing engagement and sales.</p>
-                  <h6>Key Acheivements</h6>
-                  <ul>
-                    <li>
-                      Designed a recommendation system for an education sector client, achieving a 20% increase in
-                      lesson engagement and a 15% growth in new subscriptions, substantially elevating revenue.
-                    </li>
-                    <li>
-                      This strategic implementation led to marked improvements in course enrollment and completion,
-                      contributing to a significant revenue boost for the company.
-                    </li>
-                  </ul>
-                  <!-- Project details -->
-                  <p class="technologies">Technologies: Hybrid Models, Python, Reporting, Flask, HTML, JavaScript</p>
-                  <!-- "Know More" Button -->
-                  <button type="button" class="btn btn-know-more">Know More</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Second Accordion in Second Column -->
-      <div class="col-md-6">
-        <div id="accordion2">
-          <div class="card">
-            <div class="card-header blue-accordion" id="headingTwo1" data-toggle="collapse" data-target="#collapseTwo1"
-              aria-expanded="false" aria-controls="collapseTwo1">
-              <h5 class="mb-0">Digital Human Avatars</h5>
-              <span class="industry-type">Virtual Reality</span>
-            </div>
-            <div id="collapseTwo1" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingTwo1"
-              data-parent="#accordion2">
-              <div class="card-body">
-                <div class="project">
-                  <img src="assets/img/projects/virtual_humans.jpeg" alt="Digital Human Avatars Project"
-                    style="max-width: 100%; height: auto; display: block; margin-bottom: 10px;" />
-                  <p>Leading the development of lifelike digital human avatars in virtual reality, this project involved
-                    creating realistic and interactive AI-driven avatars for immersive experiences.</p>
-                  <h6>Key Achievements</h6>
-                  <ul>
-                    <li>
-                      Utilized advanced datasets to create highly realistic digital human models, enhancing the
-                      immersive experience in virtual reality.
-                    </li>
-                    <li>
-                      Developed natural language and gesture recognition capabilities, enabling intuitive interactions
-                      with the avatars.
-                    </li>
-                  </ul>
-                  <p class="technologies">Technologies: Unity 3D, Machine Learning, AI, 3D Modeling</p>
-                  <button type="button" class="btn btn-know-more">Know More</button>
-                </div>
-              </div>
-            </div>
-          </div>
+    
+        <!-- Company Logo Column -->
+        <div class="col-md-2">
+            <!-- Replace 'path_to_proarch_logo.png' with the actual path to the ProArch IT Solutions logo -->
+            <img src="assets/img/projects/proarch.png" alt="ProArch IT Solutions Logo" class="company-logo">
         </div>
       </div>
     </div>
+
     <div class="row">
-      <!-- First Accordion in First Column -->
       <div class="col-md-6">
-          <div id="accordionHouseMarketing">
-              <div class="card">
-                  <div class="card-header blue-accordion" id="headingHouseMarketing" data-toggle="collapse" data-target="#collapseHouseMarketing" aria-expanded="false" aria-controls="collapseHouseMarketing">
-                      <h5 class="mb-0">House Marketing Analysis</h5>
-                      <span class="industry-type">Real Estate Analysis</span>
-                  </div>
-                  <div id="collapseHouseMarketing" class="collapse animate__animated animate__fadeIn" aria-labelledby="headingHouseMarketing" data-parent="#accordionHouseMarketing">
-                      <div class="card-body">
-                          <div class="project">
-                            <h6>Key accomplishments</h6>
+        <div id="accordion14">
+            <div class="card">
+                <div class="card-header purple-accordion" id="headingFourteen1" data-toggle="collapse"
+                    data-target="#collapseFourteen1" aria-expanded="false" aria-controls="collapseFourteen1">
+                    <h5 class="mb-0">Innovative Chatbot for Administrator-Level Tasks</h5>
+                    <span class="industry-type">IT innovation</span>
+                </div>
+                <div id="collapseFourteen1" class="collapse animate__animated animate__fadeIn"
+                    aria-labelledby="headingFourteen1" data-parent="#accordion14">
+                    <div class="card-body">
+                        <div class="project">
+                            <p>This project involved the development of an innovative chatbot designed to efficiently handle administrator-level tasks, such as password resets, thereby streamlining ticket resolution processes and improving overall IT support efficiency.</p>
+                            <h6>Key Achievements</h6>
                             <ul>
-                              <li>Developed a housing market predictive model with 85% accuracy, identifying key price influencers and aiding investor and policy decisions.</p>
-                              <li>Analyzed supply-demand in major cities, finding mismatches that informed targeted housing development recommendations.</p>
-                              <li>Discovered a direct correlation between economic indicators and housing prices, crucial for investment timing and policy planning.</p>
-                              </ul>
-                                <p class="technologies">Technologies: Linear Regression, Decision Trees, Random Forest, Python, Pandas, NumPy, Scikit-Learn, SQL, Data Visualization (Tableau/Power BI), Flask, HTML, JavaScript, RESTful API</p>
-                              <button type="button" class="btn btn-know-more">Know More</button>
-                          </div>
+                                <li>Successfully developed a chatbot that automated administrator-level tasks, significantly reducing the time and resources required for ticket resolutions.</li>
+                                <li>Enhanced IT support operations by automating routine tasks, allowing the IT team to focus on more complex issues.</li>
+                            </ul>
+                            <p class="technologies">Technologies: Chatbot Development, AI, Automation</p>
+                            <button type="button" class="btn btn-know-more">Know More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div id="accordion15">
+          <div class="card">
+              <div class="card-header orange-accordion" id="headingFifteen1" data-toggle="collapse"
+                  data-target="#collapseFifteen1" aria-expanded="false" aria-controls="collapseFifteen1">
+                  <h5 class="mb-0">AR Application for Retail Client</h5>
+                  <span class="industry-type">Retail</span>
+              </div>
+              <div id="collapseFifteen1" class="collapse animate__animated animate__fadeIn"
+                  aria-labelledby="headingFifteen1" data-parent="#accordion15">
+                  <div class="card-body">
+                      <div class="project">
+                          <p>This project involved creating an augmented reality (AR) application tailored for a retail client. The application was designed to enhance the in-store customer experience by providing detailed, interactive guidance, helping customers navigate the store and engage with products in a seamless and immersive manner.</p>
+                          <h6>Key Achievements</h6>
+                          <ul>
+                              <li>Developed an interactive AR application that improved the in-store journey for customers, making it more engaging and informative.</li>
+                              <li>Utilized cutting-edge AR technology to create a more dynamic and personalized shopping experience.</li>
+                          </ul>
+                          <p class="technologies">Technologies: Augmented Reality, Interactive Design, Retail Experience Enhancement</p>
+                          <button type="button" class="btn btn-know-more">Know More</button>
                       </div>
                   </div>
               </div>
@@ -403,17 +861,66 @@
       </div>
   </div>
 
+  <div class="container mt-5">
+    <div class="row">
+        <!-- Professional Details and Highlights Column -->
+        <div class="col-md-10">
+            <h3>Software Engineer Practitioner, Data Science, Concentrix</h3>
+            <p>2015 – 2016</p>
 
+            <p><strong>Highlights:</strong></p>
+            <ul class="highlight-list">
+                <li>Assisted the team in developing an automated solution for display advertisements, involving analysis and tagging of ads to streamline the segmentation process and eliminate irrelevant imagery.</li>
+            </ul>
+        </div>
+
+        <!-- Company Logo Column -->
+        <div class="col-md-2">
+            <!-- Replace 'path_to_concentrix_logo.png' with the actual path to the Concentrix logo -->
+            <img src="assets/img/projects/concentrix.jpeg" alt="Concentrix Logo" class="company-logo">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+      <div id="accordion15">
+          <div class="card">
+              <div class="card-header purple-accordion" id="headingFifteen1" data-toggle="collapse"
+                  data-target="#collapseFifteen1" aria-expanded="false" aria-controls="collapseFifteen1">
+                  <h5 class="mb-0">Automated Solution for Display Advertisements</h5>
+                  <span class="industry-type">Digital Marketing</span>
+              </div>
+              <div id="collapseFifteen1" class="collapse animate__animated animate__fadeIn"
+                  aria-labelledby="headingFifteen1" data-parent="#accordion15">
+                  <div class="card-body">
+                      <div class="project">
+                          <p>This project involved assisting the team in developing an automated solution for managing display advertisements. The focus was on analyzing and tagging ads to streamline the segmentation process, thereby enhancing the effectiveness of digital marketing efforts and eliminating irrelevant imagery.</p>
+                          <h6>Key Achievements</h6>
+                          <ul>
+                              <li>Played a crucial role in the analysis and tagging of advertisements, leading to more efficient ad segmentation and targeting.</li>
+                              <li>Contributed to the development of an automated system that reduced manual effort and improved the relevance and impact of display advertising campaigns.</li>
+                          </ul>
+                          <p class="technologies">Technologies: Digital Advertising, Data Analysis, Automation Tools</p>
+                          <button type="button" class="btn btn-know-more">Know More</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+    
+</div>
 
   
-</main>
     
   </div>
+  </main>
+
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
-<object type="text/html" data="test.html"></object>
 
 </html>
