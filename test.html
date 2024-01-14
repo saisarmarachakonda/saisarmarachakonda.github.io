@@ -1,51 +1,64 @@
-<style>
-   .typing-container {
-    font-size: 24px;
-    font-weight: bold;
-    border-right: 2px solid;
-    white-space: nowrap;
-    overflow: hidden;
-}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .word-cloud {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-.highlight {
-    color: #ff0000; /* Red color for highlight */
-}
+        .project {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 50%;
+            font-size: 16px;
+            background-color: rgba(0, 0, 0, 0.1); /* Light transparent background */
+            color: black;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+            white-space: nowrap;
+        }
 
-.highlight.ai {
-    visibility: hidden; /* Initially hide the AI text */
-}
+        .project:hover {
+            background-color: rgba(0, 0, 0, 0.2); /* Slightly darker on hover */
+            transform: scale(1.1);
+        }
 
-@keyframes blinkAnimation {
-    50% { border-color: transparent; }
-}
-.typing-container {
-    animation: blinkAnimation 1s step-end infinite;
-}
+        .retail {
+            border: 2px solid lightgreen;
+        }
 
+        .banking {
+            border: 2px solid lightblue;
+        }
 
-</style>
+        .insurance {
+            border: 2px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
 
-<div class="typing-container">
-    <span class="highlight">S</span><span id="typing"></span>
-    <span class="highlight ai">AI</span>
+<div class="word-cloud">
+    <!-- Retail Projects -->
+    <span class="project retail">Project 1</span>
+    <span class="project retail">Project 2</span>
+    <!-- Add more retail projects here -->
+
+    <!-- Banking Projects -->
+    <span class="project banking">Project A</span>
+    <span class="project banking">Project B</span>
+    <!-- Add more banking projects here -->
+
+    <!-- Insurance Projects -->
+    <span class="project insurance">Project X</span>
+    <span class="project insurance">Project Y</span>
+    <!-- Add more insurance projects here -->
 </div>
 
-
-<script>
-   const text = "oftware Engineer powered by ";
-let index = 0;
-
-function typeText() {
-    if (index < text.length) {
-        document.getElementById('typing').innerText += text[index];
-        index++;
-        setTimeout(typeText, 150); // Adjust typing speed
-    } else {
-        document.querySelector('.highlight.ai').style.visibility = 'visible'; // Show AI after typing
-    }
-}
-
-typeText();
-
-
-</script>
+</body>
+</html>

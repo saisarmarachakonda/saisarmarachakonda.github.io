@@ -1868,3 +1868,53 @@ img{
 
 
 
+/* Project cloud */
+.word-cloud-container {
+    max-width: 80%; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    position: relative;
+    overflow-y:auto;
+    height: auto;
+    /* background-color: #f5f5f5; */
+} 
+
+.word-cloud {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-cloud {
+    margin: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #fff;/* Light transparent background */
+    color: black;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.project-cloud:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly darker on hover */
+    transform: scale(1.1);
+}
+
+.Education {
+    border-bottom: 2px solid lightgreen;
+}
+
+.Banking {
+    border-bottom: 2px solid lightblue;
+}
+
+.Insurance {
+    border-bottom: 2px solid lightcoral;
+}
+
+.Retail {
+    border-bottom: 2px solid rgb(240, 111, 223);
+}
