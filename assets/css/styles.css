@@ -1904,17 +1904,17 @@ img{
 }
 
 .Education {
-    border-bottom: 2px solid lightgreen;
+    border-bottom: 2px solid rgb(46, 119, 46);
 }
 
 .Banking {
-    border-bottom: 2px solid lightblue;
+    border-bottom: 2px solid rgb(37, 140, 177);
 }
 
 .Insurance {
-    border-bottom: 2px solid lightcoral;
+    border-bottom: 2px solid rgb(218, 110, 67);
 }
 
 .Retail {
-    border-bottom: 2px solid rgb(240, 111, 223);
+    border-bottom: 2px solid rgb(147, 45, 202);
 }
