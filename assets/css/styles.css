@@ -1922,7 +1922,7 @@ img{
 
 
 
-.card {
+.gitcard {
     border: 1px solid #d1d5da;
     border-radius: 6px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -1930,14 +1930,14 @@ img{
     width: 300px;
 }
 
-.card-header {
+.gitcard-header {
     background-color: #162831;
     color: white;
     border-bottom: 1px solid #d1d5da;
     padding: 0px 12px;
 }
 
-.card-header h3 {
+.gitcard-header h3 {
     color: white;
     margin: 0;
     font-size: 15px;
@@ -1948,7 +1948,7 @@ img{
     font-size: small;
 }
 
-.card-footer {
+.gitcard-footer {
     border-top: 1px solid #d1d5da;
     background-color: #f6f8fa;
     padding: 0px 10px;
@@ -1956,11 +1956,24 @@ img{
     font-size: small;
 }
 
-.card-footer a {
+.gitcard-footer a {
     text-decoration: none;
     color: #0366d6;
 }
 
-.card-footer a:hover {
+.gitcard-footer a:hover {
     text-decoration: underline;
 }
+
+.gitcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows cards to wrap onto the next line */
+    justify-content: center;
+    /* Centers cards in the container */
+    align-items: flex-start;
+    /* Aligns items at the start of the container */
+    gap: 20px;
+    /* Space between cards */
+}
+
