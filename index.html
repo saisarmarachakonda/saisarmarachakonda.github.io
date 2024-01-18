@@ -16,6 +16,50 @@
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .card {
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-right: 1px;
+  width: 300px;
+}
+
+.card-header {
+    background-color: #162831;
+    color: white;
+    border-bottom: 1px solid #d1d5da;
+    padding: 0px 12px;
+}
+
+.card-header h3 {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+}
+
+.card-body {
+  padding: 10px;
+  font-size: small;
+}
+
+.card-footer {
+  border-top: 1px solid #d1d5da;
+  background-color: #f6f8fa;
+  padding: 0px 10px;
+  text-align: right;
+  font-size: small;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+    </style>
 
     <!--    =========== Tracker =========      -->
     <!-- Google tag (gtag.js) -->
@@ -1194,6 +1238,244 @@
             </div>
         </section>
         <!--==================== PORTFOLIO ====================-->
+        <section class="blog section" id="blog">
+            <h2 class="section__title">Github Repositories</h2>
+            <span class="section__subtitle">Explore the my github repositories</span>
+
+            <style>
+                .card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to wrap onto the next line */
+  justify-content: center; /* Centers cards in the container */
+  align-items: flex-start; /* Aligns items at the start of the container */
+  gap: 20px; /* Space between cards */
+}
+
+
+/* Add any additional styling as needed */
+
+            </style>
+
+            <div class="blog__container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="blog__content grid swiper-slide card-container" style="column-gap:0.2rem ">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>LeetcodePython</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: A collection of Python solutions for Leetcode challenges.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/LeetcodePython" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>mlflow-practice</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Practical implementation and exploration of MLflow for managing machine learning lifecycles.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/mlflow-practice" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Banking-CreditCardFraud</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Analysis and detection of credit card fraudulent transactions using data science techniques.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/Banking-CreditCardFraud" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 14 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Banking-DefaulterPrediction</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Predictive model for home loan default risk assessment in the banking sector.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/Banking-HomeLoanDefaultPrediction" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        
+                    </div>
+                    
+                    <div class="blog__content grid swiper-slide card-container" style="column-gap:0.2rem ">
+                        <!-- Card 1 -->
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>ML-Projects</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: A compilation of Machine Learning projects.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/ML-Projects" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 4 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>LLM-QnA-Huggingface</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Q&A system using Huggingface's transformers.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/LLM-QnA-Huggingface" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+            
+                    
+                       
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>LLM-Lambda-LLAMA-AWS</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Leveraging AWS Lambda functions for scalable ML solutions.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/LLM-Lambda-LLAMA-AWS" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 4 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>LLM-EvaluatingLLM-RAG</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Evaluation of Retrieval-Augmented Generation models.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/LLM-EvaluatingLLM-RAG" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Card Container -->
+                    <div class="blog__content grid swiper-slide card-container" style="column-gap:0.2rem ">
+                        <!-- Card 5 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>ML-BusinessAnalytics</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Application of Machine Learning in business analytics.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/ML-BusinessAnalytics" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 6 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>ML-PysparkMlib</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Machine Learning projects using PySpark's MLlib.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/ML-PysparkMlib" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>Tableau-HRAttritionAnalysis</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Detailed HR attrition analysis using Tableau.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/Tableau-HRAttritionAnalysis" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 7 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>NLP-NamedEntityExtractor</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: NLP project for named entity extraction.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/NLP-NamedEntityExtractor" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog__content grid swiper-slide card-container" style="column-gap:0.2rem ">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>ML-BusinessAnalytics</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Application of Machine Learning in business analytics.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/ML-BusinessAnalytics" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    
+                        <!-- Card 6 -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h3>ML-PysparkMlib</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Description: Machine Learning projects using PySpark's MLlib.</p>
+                            </div>
+                            <div class="card-footer">
+                                <a href="https://github.com/saisarmarachakonda/ML-PysparkMlib" target="_blank">&lt; code &gt;</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                      
+
+
+                    
+
+
+                </div>
+
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                </div>
+
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </section>
+
+
         <section class="blog section" id="blog">
             <h2 class="section__title">Dashboards</h2>
             <span class="section__subtitle">Explore the visual data insights</span>

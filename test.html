@@ -1,64 +1,65 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .word-cloud {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+<style>
+    .card {
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 20px;
+  width: 300px;
+}
 
-        .project {
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 50%;
-            font-size: 16px;
-            background-color: rgba(0, 0, 0, 0.1); /* Light transparent background */
-            color: black;
-            transition: background-color 0.3s, transform 0.3s;
-            cursor: pointer;
-            white-space: nowrap;
-        }
+.card-header {
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #d1d5da;
+  padding: 8px 16px;
+}
 
-        .project:hover {
-            background-color: rgba(0, 0, 0, 0.2); /* Slightly darker on hover */
-            transform: scale(1.1);
-        }
+.card-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
 
-        .retail {
-            border: 2px solid lightgreen;
-        }
+.card-body {
+  padding: 16px;
+}
 
-        .banking {
-            border: 2px solid lightblue;
-        }
+.card-footer {
+  border-top: 1px solid #d1d5da;
+  background-color: #f6f8fa;
+  padding: 8px 16px;
+  text-align: right;
+}
 
-        .insurance {
-            border: 2px solid lightcoral;
-        }
-    </style>
-</head>
-<body>
+.card-footer a {
+  text-decoration: none;
+  color: #0366d6;
+}
 
-<div class="word-cloud">
-    <!-- Retail Projects -->
-    <span class="project retail">Project 1</span>
-    <span class="project retail">Project 2</span>
-    <!-- Add more retail projects here -->
+.card-footer a:hover {
+  text-decoration: underline;
+}
 
-    <!-- Banking Projects -->
-    <span class="project banking">Project A</span>
-    <span class="project banking">Project B</span>
-    <!-- Add more banking projects here -->
+</style>
+<div class="card">
+    <div class="card-header">
+      <h3>Project Name</h3>
+    </div>
+    <div class="card-body">
+      <p>Description of the project...</p>
+    </div>
+    <div class="card-footer">
+      <a href="project-link.html">View Project</a>
+    </div>
+  </div>
 
-    <!-- Insurance Projects -->
-    <span class="project insurance">Project X</span>
-    <span class="project insurance">Project Y</span>
-    <!-- Add more insurance projects here -->
-</div>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mouseover', () => {
+    card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+  });
 
-</body>
-</html>
+  card.addEventListener('mouseout', () => {
+    card.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+  });
+});
+
+  </script>
