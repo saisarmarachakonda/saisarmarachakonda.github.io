@@ -1943,7 +1943,7 @@ img{
     font-size: 15px;
 }
 
-.card-body {
+.gitcard-body {
     padding: 10px;
     font-size: small;
 }
@@ -1956,6 +1956,9 @@ img{
     font-size: small;
 }
 
+.gitcard-footer p{
+    font-size: small;
+}
 .gitcard-footer a {
     text-decoration: none;
     color: #0366d6;
