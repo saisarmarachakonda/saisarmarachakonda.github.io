@@ -1,0 +1,65 @@
+<style>
+    .card {
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin: 20px;
+  width: 300px;
+}
+
+.card-header {
+  background-color: #f6f8fa;
+  border-bottom: 1px solid #d1d5da;
+  padding: 8px 16px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-footer {
+  border-top: 1px solid #d1d5da;
+  background-color: #f6f8fa;
+  padding: 8px 16px;
+  text-align: right;
+}
+
+.card-footer a {
+  text-decoration: none;
+  color: #0366d6;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+</style>
+<div class="card">
+    <div class="card-header">
+      <h3>Project Name</h3>
+    </div>
+    <div class="card-body">
+      <p>Description of the project...</p>
+    </div>
+    <div class="card-footer">
+      <a href="project-link.html">View Project</a>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('mouseover', () => {
+    card.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+  });
+
+  card.addEventListener('mouseout', () => {
+    card.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
+  });
+});
+
+  </script>
