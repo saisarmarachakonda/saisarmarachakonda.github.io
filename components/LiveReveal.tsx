@@ -42,26 +42,36 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
       {/* Dynamic Background Ambience */}
       <div className="absolute inset-0 z-0">
         <div className={`absolute inset-0 bg-amber-900/10 transition-opacity duration-1000 ${stage === 'reveal' ? 'opacity-100' : 'opacity-0'}`} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vh] h-[120vh] opacity-10 pointer-events-none">
+          <svg className="w-full h-full text-amber-500 animate-[spin_60s_linear_infinite]" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="0.2">
+            <circle cx="50" cy="50" r="40" />
+            <circle cx="50" cy="50" r="30" />
+            <path d="M50 0 L50 100 M0 50 L100 50" />
+            <path d="M15 15 L85 85 M85 15 L15 85" />
+            <circle cx="50" cy="50" r="20" strokeDasharray="1 2" />
+          </svg>
+        </div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(251,191,36,0.05)_0%,transparent_70%)]" />
       </div>
 
       {/* Floating Particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
-        {[...Array(30)].map((_, i) => (
+      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
+        {[...Array(40)].map((_, i) => (
           <div
             key={i}
-            className="particle bg-white w-[2px] h-[2px] rounded-full"
+            className="particle bg-amber-200 w-[3px] h-[3px] rounded-full blur-[1px]"
             style={{
               left: `${Math.random() * 100}%`,
               top: '100%',
               animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 7 + 3}s`
+              animationDuration: `${Math.random() * 10 + 5}s`,
+              opacity: Math.random() * 0.7
             }}
           />
         ))}
       </div>
 
-      <button 
+      <button
         onClick={onBack}
         className="absolute top-8 left-8 text-white/40 hover:text-white transition-all z-[60] flex items-center gap-3 px-5 py-2.5 border border-white/10 rounded-full bg-black/40 backdrop-blur-xl uppercase text-[10px] tracking-[0.4em]"
       >
@@ -82,8 +92,8 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             </p>
             <div className="flex gap-3 justify-center">
               {[...Array(5)].map((_, i) => (
-                <div 
-                  key={i} 
+                <div
+                  key={i}
                   className={`h-1 rounded-full transition-all duration-1000 ${5 - timer > i ? 'w-8 bg-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.6)]' : 'w-4 bg-white/10'}`}
                 />
               ))}
@@ -112,7 +122,7 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             {/* Cinematic Letterbox Overlays */}
             <div className="absolute top-0 w-full h-[10%] bg-black z-10 hidden md:block" />
             <div className="absolute bottom-0 w-full h-[10%] bg-black z-10 hidden md:block" />
-            
+
             {/* Soft Edge Vignette */}
             <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.8)]" />
           </div>
@@ -120,7 +130,7 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
           {/* Unmute Action Overlay */}
           {isMuted && (
             <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
-              <button 
+              <button
                 onClick={handleUnmute}
                 className="pointer-events-auto group relative flex flex-col items-center gap-6 p-12 rounded-full transition-all hover:scale-105 active:scale-95"
               >
