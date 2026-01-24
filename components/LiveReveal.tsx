@@ -1,15 +1,48 @@
 
+
 import React, { useState, useEffect, useRef } from 'react';
 
 const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
   const [stage, setStage] = useState<'countdown' | 'reveal'>('countdown');
   const [timer, setTimer] = useState(5);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const audioContextRef = useRef<AudioContext | null>(null);
+
+  // Initialize Audio Context on mount (or first interaction)
+  useEffect(() => {
+    audioContextRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+    return () => {
+      audioContextRef.current?.close();
+    };
+  }, []);
+
+  const playTickSound = () => {
+    if (audioContextRef.current) {
+      const ctx = audioContextRef.current;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      // Cinematic tick: Low frequency, short burst
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(60, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, ctx.currentTime + 0.1);
+
+      gain.gain.setValueAtTime(0.3, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.1);
+
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.1);
+    }
+  };
 
   useEffect(() => {
     let interval: any;
     if (stage === 'countdown' && timer > 0) {
+      playTickSound(); // Play sound on each tick
       interval = setInterval(() => {
         setTimer(prev => prev - 1);
       }, 1000);
@@ -24,6 +57,7 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
     if (stage === 'reveal' && videoRef.current) {
       videoRef.current.play().catch(error => {
         console.log("Autoplay prevented, waiting for user interaction:", error);
+        setIsMuted(true); // Fallback to muted if autoplay fails
       });
     }
   }, [stage]);
@@ -32,7 +66,6 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
     if (videoRef.current) {
       videoRef.current.muted = false;
       setIsMuted(false);
-      // Ensure it's playing if it was paused
       videoRef.current.play();
     }
   };
