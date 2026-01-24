@@ -4,10 +4,21 @@ import React from 'react';
 const Hero: React.FC<{ onStart: () => void }> = ({ onStart }) => {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 overflow-hidden">
-      {/* Background Ambience */}
+      {/* Background Ambience & Constellation */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-amber-600/10 rounded-full blur-[180px] animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-rose-600/10 rounded-full blur-[180px] animate-pulse transition-all duration-[5000ms]" />
+
+        {/* Constellation Layer */}
+        <div className="absolute inset-0 opacity-20 animate-spin-slow duration-[120s]">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            {[...Array(20)].map((_, i) => (
+              <circle key={i} cx={Math.random() * 100} cy={Math.random() * 100} r={Math.random() * 0.3} fill="white" />
+            ))}
+            <path d="M10,10 L30,40 L60,20" stroke="white" strokeWidth="0.1" fill="none" />
+            <path d="M70,80 L90,60 L50,50" stroke="white" strokeWidth="0.1" fill="none" />
+          </svg>
+        </div>
       </div>
 
       <div className="relative z-10 text-center max-w-4xl px-4">
@@ -19,7 +30,8 @@ const Hero: React.FC<{ onStart: () => void }> = ({ onStart }) => {
           </svg>
         </div>
 
-        <h1 className="text-6xl md:text-9xl font-serif text-white mb-6 tracking-tighter leading-none fade-in-up delay-200">
+        <h1 className="text-6xl md:text-9xl font-serif text-white mb-6 tracking-tighter leading-none fade-in-up delay-200 relative">
+          <span className="absolute -left-8 md:-left-16 top-0 text-amber-500/30 text-8xl font-thin opacity-50 select-none animate-pulse">{'{'}</span>
           The Name <br />
           <span className="italic text-amber-500 shimmer-text relative inline-block">
             Ceremony.
@@ -27,6 +39,7 @@ const Hero: React.FC<{ onStart: () => void }> = ({ onStart }) => {
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" fill="none" />
             </svg>
           </span>
+          <span className="absolute -right-8 md:-right-16 bottom-0 text-amber-500/30 text-8xl font-thin opacity-50 select-none animate-pulse">{'}'}</span>
         </h1>
 
         <div className="flex items-center justify-center gap-4 mb-12 fade-in-up delay-300 opacity-60">

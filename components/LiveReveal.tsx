@@ -115,30 +115,39 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
       </button>
 
       {stage === 'countdown' && (
-        <div className="relative z-10 text-center select-none">
-          <div className="text-[18rem] md:text-[28rem] font-serif font-bold text-white leading-none tracking-tighter transition-all transform animate-pulse drop-shadow-[0_0_30px_rgba(255,255,255,0.2)]">
-            {timer}
+        <div className="relative z-10 text-center select-none flex flex-col items-center">
+          <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center">
+            {/* Progress Ring */}
+            <svg className="absolute inset-0 w-full h-full -rotate-90 text-amber-900/30" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="2" />
+              <circle
+                cx="50" cy="50" r="45"
+                fill="none"
+                stroke="#f59e0b"
+                strokeWidth="2"
+                strokeDasharray="283"
+                strokeDashoffset={283 - (283 * (5 - timer)) / 5}
+                className="transition-all duration-1000 ease-linear"
+              />
+            </svg>
+
+            <div className="text-[10rem] md:text-[14rem] font-serif font-bold text-white leading-none tracking-tighter pulse-slow drop-shadow-[0_0_30px_rgba(251,191,36,0.4)]">
+              {timer}
+            </div>
           </div>
+
           <div className="mt-8 space-y-4">
             <p className="text-amber-500/80 tracking-[1.5em] uppercase text-xs font-bold animate-pulse">
-              Preparing the Moment
+              Moment of Destiny
             </p>
-            <div className="flex gap-3 justify-center">
-              {[...Array(5)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`h-1 rounded-full transition-all duration-1000 ${5 - timer > i ? 'w-8 bg-amber-500 shadow-[0_0_15px_rgba(245,158,11,0.6)]' : 'w-4 bg-white/10'}`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       )}
 
       {stage === 'reveal' && (
-        <div className="relative w-full h-full animate-fade-in flex flex-col items-center justify-center">
+        <div className="relative w-full h-full curtain-reveal flex flex-col items-center justify-center overflow-hidden bg-black">
           {/* Cinematic Container */}
-          <div className="relative w-full h-full flex items-center justify-center bg-black">
+          <div className="relative w-full h-full flex items-center justify-center">
             <video
               ref={videoRef}
               className="w-full h-full object-contain md:object-cover max-w-none"
@@ -153,8 +162,8 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
             </video>
 
             {/* Cinematic Letterbox Overlays */}
-            <div className="absolute top-0 w-full h-[10%] bg-black z-10 hidden md:block" />
-            <div className="absolute bottom-0 w-full h-[10%] bg-black z-10 hidden md:block" />
+            <div className="absolute top-0 w-full h-[12%] bg-black z-10 hidden md:block" />
+            <div className="absolute bottom-0 w-full h-[12%] bg-black z-10 hidden md:block" />
 
             {/* Soft Edge Vignette */}
             <div className="absolute inset-0 pointer-events-none shadow-[inset_0_0_150px_rgba(0,0,0,0.8)]" />
@@ -162,7 +171,7 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
           {/* Unmute Action Overlay */}
           {isMuted && (
-            <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none fade-in-up delay-1000">
               <button
                 onClick={handleUnmute}
                 className="pointer-events-auto group relative flex flex-col items-center gap-6 p-12 rounded-full transition-all hover:scale-105 active:scale-95"
@@ -181,7 +190,7 @@ const LiveReveal: React.FC<{ onBack: () => void }> = ({ onBack }) => {
 
           {/* Subtle Video Footer */}
           {!isMuted && (
-            <div className="absolute bottom-12 text-white/20 uppercase tracking-[0.5em] text-[10px] pointer-events-none z-20">
+            <div className="absolute bottom-12 text-white/20 uppercase tracking-[0.5em] text-[10px] pointer-events-none z-20 animate-pulse">
               Arjun • The Eternal Light
             </div>
           )}
