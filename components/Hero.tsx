@@ -20,9 +20,9 @@ const Hero: React.FC<{ onStart: () => void }> = ({ onStart }) => {
         </div>
 
         <h1 className="text-6xl md:text-9xl font-serif text-white mb-6 tracking-tighter leading-none fade-in-up delay-200">
-          The Legend <br />
+          The Name <br />
           <span className="italic text-amber-500 shimmer-text relative inline-block">
-            Begins Here.
+            Ceremony.
             <svg className="absolute -bottom-4 left-0 w-full h-3 text-amber-500/30" viewBox="0 0 100 10" preserveAspectRatio="none">
               <path d="M0 5 Q 50 10 100 5" stroke="currentColor" fill="none" />
             </svg>
