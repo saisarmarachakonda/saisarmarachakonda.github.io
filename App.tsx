@@ -1,25 +1,33 @@
 
-import React, { useState } from 'react';
+import React from 'react';
+import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import LiveReveal from './components/LiveReveal';
-import { ViewState } from './types';
+import CloudProviders from './components/CloudProviders';
+import Services from './components/Services';
+import AgenticShowcase from './components/AgenticShowcase';
+import ProcessFlow from './components/ProcessFlow';
+import CaseStudies from './components/CaseStudies';
+import Careers from './components/Careers';
+import PerformanceStats from './components/PerformanceStats';
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<ViewState>('home');
-
   return (
-    <div className="min-h-screen bg-[#050505] selection:bg-amber-500/30 overflow-x-hidden">
-      {view === 'home' ? (
-        <Hero onStart={() => setView('reveal')} />
-      ) : (
-        <LiveReveal onBack={() => setView('home')} />
-      )}
-      
-      {view === 'home' && (
-        <footer className="fixed bottom-8 w-full text-center text-white/20 text-xs uppercase tracking-[0.3em] pointer-events-none">
-          Nomina Studio • Est. 2025
-        </footer>
-      )}
+    <div className="min-h-screen bg-slate-50 text-slate-900 selection:bg-blue-500/20">
+      <Navbar />
+      <main>
+        <Hero />
+        <CloudProviders />
+        <Services />
+        <AgenticShowcase />
+        <ProcessFlow />
+        <CaseStudies />
+        <Careers />
+        <PerformanceStats />
+        <ContactUs />
+      </main>
+      <Footer />
     </div>
   );
 };
